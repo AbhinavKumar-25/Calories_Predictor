@@ -1,4 +1,4 @@
-# 🍎 Calories Predictor Web App
+# Calories Predictor Web App
 
 This project is a **Flask-based web application** that predicts the number of calories burned during physical activity based on user inputs such as gender, age, height, weight, duration, heart rate, and body temperature.  
 The backend uses a **Linear Regression model (Scikit-learn)** trained on the provided dataset (`calories.csv`).
