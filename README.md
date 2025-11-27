@@ -66,33 +66,33 @@ Calories_Predictor/
 
 ## ▶️ How to Run the Project
 ## 1️⃣ Install dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ## 2️⃣ Configure your MySQL database
 Create a database:
-CREATE DATABASE calories_predictor;
-Update your DB URI inside your Flask app:
-SQLALCHEMY_DATABASE_URI = "mysql://username:password@localhost/calories_predictor"
+- CREATE DATABASE calories_predictor;
+- Update your DB URI inside your Flask app:
+- SQLALCHEMY_DATABASE_URI = "mysql://username:password@localhost/calories_predictor"
 
 ## 3️⃣ Run the Flask app
-python app.py
+- python app.py
 
-Visit in browser:
-👉 http://127.0.0.1:5000/
+- Visit in browser:
+- 👉 http://127.0.0.1:5000/
 
 ## 📊 Example Prediction
 Input:
-Gender: Male
-Age: 25
-Height: 175 cm
-Weight: 70 kg
-Duration: 30 minutes
-Heart Rate: 120 bpm
-Body Temp: 39.5 °C
+- Gender: Male
+- Age: 25
+- Height: 175 cm
+- Weight: 70 kg
+- Duration: 30 minutes
+- Heart Rate: 120 bpm
+- Body Temp: 39.5 °C
 
 Output:
-Predicted Calories Burned: 245.67 kcal
-Model Accuracy: 96.85%
+- Predicted Calories Burned: 245.67 kcal
+- Model Accuracy: 96.85%
 
 ## 💻 Tech Stack
 ## Backend
