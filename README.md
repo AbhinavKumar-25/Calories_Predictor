@@ -25,14 +25,14 @@ It integrates an ML model built with Scikit-Learn, a secure Flask backend, and a
 - Clean ORM-based implementation using SQLAlchemy
   
 ## 📊 Input Features
-- The user provides the following details to get a calorie prediction:
-Gender
-Age
-Height (cm)
-Weight (kg)
-Duration (minutes)
-Heart Rate (bpm)
-Body Temperature (°C)
+The user provides the following details to get a calorie prediction:
+- Gender
+- Age
+- Height (cm)
+- Weight (kg)
+- Duration (minutes)
+- Heart Rate (bpm)
+- Body Temperature (°C)
 
 ## 🧠 Model Workflow
 1. Load and preprocess dataset
