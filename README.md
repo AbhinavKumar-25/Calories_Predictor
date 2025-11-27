@@ -43,8 +43,9 @@ The user provides the following details to get a calorie prediction:
 6. Evaluate and save using Joblib
 7. Integrate model into Flask backend
 
-```
+
 ## 📂 Project Structure
+```
 Calories_Predictor/
 │── app.py                     # Flask backend
 │── model.pkl                  # Trained ML model
