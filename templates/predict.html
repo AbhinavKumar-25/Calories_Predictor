@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+  <div class="dashboard-header">
+  <h1>Calories Burned Predictor</h1>
+<p>Welcome, <strong>{{ user.username }}</strong></p> </div>
+
+  <div class="form-card">
+    <h2>Enter Your Workout Details</h2>
+    <form method="POST" action="{{ url_for('predict') }}" class="predict-form">
+  <div class="form-grid">
+
+    {% if not user.gender %}
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" required>
+      <option value="">Select your gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+{% else %}
+  <input type="hidden" name="gender" value="{{ user.gender }}">
+{% endif %}
+
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter age" required min="10" max="90" step="1">
+    </div>
+
+    <div class="form-group">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" name="height" placeholder="Enter height" required min="120" max="250" step="0.1">
+    </div>
+
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" name="weight" placeholder="Enter weight" required min="25" max="140" step="0.1">
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duration (min):</label>
+      <input type="number" id="duration" name="duration" placeholder="Enter duration" required min="1" max="250" step="1">
+    </div>
+
+    <div class="form-group">
+      <label for="heart_rate">Heart Rate (bpm):</label>
+      <input type="number" id="heart_rate" name="heart_rate" placeholder="Enter heart rate" required min="30" max="150" step="0.1">
+    </div>
+
+    <div class="form-group full-width">
+      <label for="body_temp">Body Temp (°C):</label>
+      <input type="number" id="body_temp" name="body_temp" step="0.1" placeholder="Enter body temp" required min="30" max="45">
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn-primary">Predict Calories</button>
+</form>
+
+
+    {% if prediction %}
+    <div class="result-box">
+      <p class="prediction">🔥 Calories Burned: {{ prediction }} kcal</p>
+      <p class="accuracy">Model Accuracy: {{ accuracy }}%</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="progress-card">
+    <h2>📊 Your Progress</h2>
+    <table class="progress-table">
+      <thead>
+        <tr>
+          <th>Date</th><th>Age</th><th>Height</th>
+          <th>Weight</th><th>Duration</th><th>Heart Rate</th><th>Body Temp</th><th>Calories Burned</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in progress %}
+        <tr>
+          <td>{{ entry.timestamp.strftime('%d-%m-%y') }}</td>
+          <td>{{ entry.age }}</td>
+          <td>{{ entry.height }}</td>
+          <td>{{ entry.weight }}</td>
+          <td>{{ entry.duration }}</td>
+          <td>{{ entry.heart_rate }}</td>
+          <td>{{ entry.body_temp }}</td>
+          <td>{{ entry.predicted_calories }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+  <!-- Logout Button at the Bottom -->
+  <div class="logout-section">
+    <a href="{{ url_for('logout') }}" class="logout-btn-bottom">🚪 Logout</a>
+  </div>
+{% endblock %}
