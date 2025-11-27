@@ -1,6 +1,6 @@
-# 🏋️‍♂️ Calories Burned Predictor — ML + Flask + MySQL Web Application
+# 🏋️‍♂️ Calories Burned Predictor - ML + Flask + MySQL Web Application
 
-This project is a machine learning–powered web application that predicts how many calories a person burns during exercise based on key physical and workout parameters.
+This project is a machine learning-powered web application that predicts how many calories a person burns during exercise based on key physical and workout parameters.
 It integrates an ML model built with Scikit-Learn, a secure Flask backend, and a MySQL database to deliver end-to-end functionality.
 
 ## 🚀 Features
@@ -78,7 +78,7 @@ Create a database:
 
 ## 3️⃣ Run the Flask app
 - python app.py
-
+- 
 - Visit in browser:
 - 👉 http://127.0.0.1:5000/
 
@@ -122,4 +122,4 @@ Output:
 - VS Code
 
 ## 📝 Author
-A Abhinav Kumar
+-- A Abhinav Kumar
