@@ -43,6 +43,7 @@ The user provides the following details to get a calorie prediction:
 6. Evaluate and save using Joblib
 7. Integrate model into Flask backend
 
+```
 ## 📂 Project Structure
 Calories_Predictor/
 │── app.py                     # Flask backend
@@ -62,7 +63,7 @@ Calories_Predictor/
     ├── login.html             # Login form
     ├── register.html          # Registration form
     └── dashboard.html         # User history page
-
+```
 
 ## ▶️ How to Run the Project
 ## 1️⃣ Install dependencies
