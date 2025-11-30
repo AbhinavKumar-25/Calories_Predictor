@@ -8,7 +8,7 @@ import numpy as np
 import joblib
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key_here'
+app.config['SECRET_KEY'] = 'wsedrftgyhuj456rutygf'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@localhost/calories_predictor'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
